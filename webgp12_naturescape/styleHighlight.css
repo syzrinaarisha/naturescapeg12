@@ -1,0 +1,247 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    scroll-behavior: smooth;
+}
+
+body{
+    min-height: 100vh;
+    background-color: black;
+    width: 100%;
+}
+
+header{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 7px 3%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1000;
+}
+
+.logo{
+    width: 200px;
+    height: 200px;
+    cursor: pointer; 
+}
+
+.navbar{
+    width: 85%;
+    margin-top: 30px;
+    margin-left: 4px;
+    padding: 0% 0%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.navbar ul li{
+    list-style: none;
+    display: inline-block;
+    margin: 2px 2px;
+    position: relative;
+}
+
+.navbar ul li a{
+    text-decoration: none;
+    color: white;
+    text-transform: uppercase;
+    margin-top: 10px;
+    margin: 1000px 10px;
+}
+
+.navbar ul i{
+    color: white;
+}
+
+.navbar ul li.active a{
+    padding: 5px 20px;
+    background-color: white;
+    color: black;
+}
+
+.navbar ul li::after{
+    content: '';
+    height: 3px;
+    width: 0;
+    background: #d3ad7f;
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+    transition: 0.5s;
+}
+
+.navbar ul li:hover::after{
+    width: 100%;
+}
+  
+  .navbar ul li:hover::after{
+    width: 100%;
+}
+
+section{
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    padding: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+section::before{
+    content: '';
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 100px;
+    background: linear-gradient(to top,#000000,transparent);
+    z-index: 1000;
+}
+
+section img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    pointer-events: none;
+}
+
+section img#treesf{
+    z-index: 10;
+}
+
+section img#moon{
+    mix-blend-mode: screen;
+}
+
+#text{
+    position: absolute;
+    right: -350px;
+    color: #fff;
+    white-space: nowrap;
+    font-size: 7.5vw;
+    z-index: 9;
+}
+
+#btn{
+    text-decoration: none;
+    display: inline-block;
+    padding: 8px 30px;
+    border-radius: 40px;
+    background:#d3ad7f;
+    color: white;
+    font-size: 1.5em;
+    z-index: 9;
+    transform: translateY(100px) ;
+}
+
+.sec{
+    position: relative;
+    padding: 100px;
+    background: #000000;
+}
+
+.sec h2{
+    font-size: 3.5em;
+    margin-bottom: 10px;
+    color: white;
+}
+
+.sec h2 span{
+    color: #d3ad7f;
+}
+
+.sec p{
+    font-size: 1.2em;
+    margin-bottom: 10px;
+    color: #fff;
+}
+
+.container{
+    margin: 100px;;
+}
+
+h1{
+    font-size: 100px;
+}
+
+h2{
+    font-size: 40px;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.cards{
+    display: flex;
+}
+
+.title h2{
+    color: #fff;
+}
+
+.title h2 span{
+    color: #d3ad7f;
+}
+
+.cards .text-card{
+    color: #d3ad7f;
+    margin: 20px;
+    padding: 30px;
+    width: 500px;
+    border: 1px solid #d3ad7f;
+    box-sizing: border-box;
+}
+
+.cards .text-card h3{
+    color: white;
+    font-size: 30px;
+    text-align: center;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+    margin: 10px;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.cards .text-card p{
+    text-align: center;
+}
+
+.cards .text-card:hover{
+    background-color:#d3ad7f;
+    color: white;
+}
+
+@media (max-width: 900px)
+{
+    h1{
+        font-size: 40px;
+    }
+
+    .cards{
+        flex-direction: column;
+    }
+}
+
+.reveal{
+    position: relative;
+    transform: translate(150px);
+    opacity: 0;
+    transition: all 2s ease;
+}
+
+.reveal.active{
+    transform: translate(0px);
+    opacity: 1;
+}
+
+

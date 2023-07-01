@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Highlight</title>
+    <link rel="stylesheet" type="text/css" href="styleHighlight.css">
+    
+    <link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.1/css/fontawesome.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+    <script src="https://kit.fontawesome.com/f9af9fa8b1.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <header>
+        <div class="navbar">
+            <img src="images/logo.png" class="logo" style="margin-top: -5%;">
+            <ul style="margin-bottom: 13%; margin-right: -15%;">                    
+                <li><a href="#" onclick="window.location.href = 'index.html'">Home</a></li>
+                <li class="active"><a href="#" onclick="window.location.href = 'Highlight.html'">Highlight</a></li>
+                <li><a href="#" onclick="window.location.href = 'Products.html'">Products</a></li>
+                <li><a href="#" onclick="window.location.href = 'AboutUs.html'">About Us</a></li>
+                <li><a href="#" onclick="window.location.href = 'ourTeam.html'">Our Team</a></li>
+                <li><a href="#" onclick="window.location.href = 'registration.php'">Register</a></li>
+                <img src="images/logout.png" class="logo" onclick="window.location.href = 'logout.php'" style="width: 20px; height: 20px; margin-bottom: -4px;">
+            </ul>
+        </div>
+    </header>
+
+    <section>
+        <img src="images/mountain bg.jpg" id="mountainbg">
+        <img src="images/moon.png" id="moon">
+        <h2 id="text">NatureScape</h2>
+        <a href="#sec" id="btn">explore</a>
+        <img src="images/treesf.png" id="treesf">
+    </section>
+
+    <div class="sec" id="sec">
+        <h2><span>Our</span> History</h2>
+        <p style="text-align: justify;">Naturescape, a prominent company specializing in camping gear, has an inspiring history rooted in a passion for the outdoors. Established in the early 2000s, Naturescape was born out of a deep love for nature and a desire to enhance the camping experience for adventurers of all levels. The company's founders, avid campers themselves, recognized the need for high-quality, reliable gear that could withstand the demands of the wilderness while providing comfort and convenience.<br><br>From humble beginnings, Naturescape quickly gained recognition for its commitment to excellence. By sourcing premium materials and collaborating with skilled designers, the company crafted a range of innovative camping gear, including tents, sleeping bags, backpacks, and cooking equipment. Naturescape's dedication to delivering durable, functional, and aesthetically pleasing products resonated with outdoor enthusiasts worldwide. As a result, the company experienced steady growth and expanded its distribution channels, ensuring that campers everywhere could access their exceptional gear. Today, Naturescape remains a trusted name in the camping gear industry, providing adventurers with the tools they need to embrace the wonders of nature with confidence and comfort.</p>
+    </div>
+    
+    <div class="container reveal">
+        <div class="title">
+            <h2><span>Our</span> Speciality</h2>
+        </div>
+
+        <div class="cards">
+            <div class="text-card">
+                <h3>Lightweight and Compact Design</h3>
+                <p>Naturescape excels in producing camping gear that prioritizes portability and ease of use. The company's products are designed to be lightweight and compact, making them ideal for backpackers, hikers, and anyone looking to minimize the load they carry. Naturescape achieves this by utilizing innovative materials and streamlined designs without compromising on durability or functionality. </p>
+            </div>
+
+            <div class="text-card">
+                <h3>Weather Resistance and Versatility</h3>
+                <p>Naturescape understands the unpredictable nature of the outdoors and the varying weather conditions that campers may encounter. As a result, their camping gear is specially engineered to withstand diverse climates and provide reliable performance. Whether it's a tent with robust rainfly and waterproof seams, a sleeping bag with excellent insulation for cold nights, or clothing with moisture-wicking and quick-drying properties, Naturescape gear offers exceptional weather resistance and versatility. </p>
+            </div>
+
+            <div class="text-card">
+                <h3>Thoughtful Organizational Features</h3>
+                <p>Naturescape takes pride in designing camping gear that enhances organization and convenience during outdoor adventures. The company's products often feature well-thought-out storage compartments, multiple pockets, and intelligent layouts. Backpacks may include dedicated compartments for hydration systems or compartments for separating wet and dry items. Tents and sleeping bags might have interior pockets for easy access to essentials or built-in gear loops for hanging lanterns or other equipment.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="container reveal">
+        <div class="title">
+            <h2><span>Our</span> Achievement</h2>
+        </div>
+            
+        <div class="cards">
+            <div class="text-card">
+                <h3 style="margin-top: 30px;">Innovation in Outdoor Gear Award</h3>
+                <p style="margin-top: 60px;">Naturescape receives the prestigious "Innovation in Outdoor Gear" award for its groundbreaking advancements in camping gear technology.The company's relentless pursuit of innovation has resulted in the development of revolutionary products that redefine the camping experience </p>
+            </div>
+
+            <div class="text-card">
+                <h3>Customer Choice Award for Exceptional Durability</h3>
+                <p>Naturescape earns the coveted "Customer Choice Award for Exceptional Durability" for its commitment to producing camping gear that withstands the test of time and rugged outdoor conditions. This recognition reflects the high level of customer satisfaction and trust in the brand's products.</p>
+            </div>
+
+            <div class="text-card">
+                <h3>Outdoor Adventure Magazine's Gear of the Year</h3>
+                <p>Naturescape receives the highly esteemed "Gear of the Year" award from a leading outdoor adventure magazine. This accolade recognizes Naturescape's exceptional line of camping gear for its outstanding performance, versatility, and user-friendly features.</p>
+            </div>
+        </div>
+    </div>
+ 
+    <script type="text/javascript">
+        window.addEventListener('scroll',reveal);
+    
+        function reveal(){
+            var reveals = document.querySelectorAll('.reveal');
+                for(var i = 0; i < reveals.length; i++){
+                    var windowheight = window.innerHeight;
+                    var revealtop = reveals[i].getBoundingClientRect().top;
+                    var revealpoint = 150;
+    
+                    if(revealtop < windowheight - revealpoint){
+                        reveals[i].classList.add('active');
+                    }
+                    else{
+                        reveals[i].classList.remove('active');
+                    }
+                }
+            }
+        </script>
+   
+
+    <script>
+        let mountainbg = document.getElementById('mountainbg');
+        let text = document.getElementById('text');
+        let btn = document.getElementById('btn');
+        let treesf = document.getElementById('treesf');
+        let header = document.querySelector('header');
+
+
+        window.addEventListener('scroll', function(){
+            let value = window.scrollY;
+            moon.style.top = value * 0.5 + 'px';
+            mountainbg.style.top = value * 0.5 + 'px';
+            treesf.style.top = value * 0 + 'px';
+            text.style.marginRight = value * 2 + 'px';
+            text.style.marginTop = value * 0.5 + 'px';
+            btn.style.marginTop = value * 0.5 + 'px';
+            header.style.top = value * 0.5 + 'px';
+        })
+    </script>
+</body>
+</html>

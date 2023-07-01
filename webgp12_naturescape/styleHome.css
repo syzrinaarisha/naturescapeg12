@@ -1,0 +1,164 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+
+#video-background{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+#video-background video{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+section{
+    padding: 20px 3%;
+}
+
+.logo{
+    width: 200px;
+    height: 200px;
+    cursor: pointer; 
+    margin-top: -50px;
+}
+
+.navbar{
+    width: 85%;
+    margin-top: 20px;
+    margin-left: 1px;
+    padding: 0% 0%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+.navbar ul li{
+    list-style: none;
+    display: inline-block;
+    margin: 2px 2px;
+    position: relative;
+}
+
+.navbar ul i{
+    color: white;
+}
+
+.navbar ul li a{
+    text-decoration: none;
+    color: white;
+    text-transform: uppercase;
+    margin-top: 10px;
+    margin: 1000px 10px;
+}
+
+.navbar ul li.active a{
+    padding: 5px 20px;
+    background-color: white;
+    color: black;
+}
+
+.navbar ul li::after{
+    content: '';
+    height: 3px;
+    width: 0;
+    background: #fcbf9b;
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+    transition: 0.5s;
+}
+
+.navbar ul li:hover::after{
+    width: 100%;
+}
+
+.back-video{
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+}
+
+.content{
+    width: 100%;
+    top: 50%;
+    padding-top: 100px;
+    transform: translateY(5%);
+    text-align: center;
+    color: white; 
+    background-position: center;
+    border-radius: 25px;
+}
+
+.content h1{
+    font-size: 100px;
+    font-family: brush script;
+    color: #f5f0ebd2;
+    position: center;
+}
+
+.content p{
+    margin: 20px auto;
+    font-weight: 100;
+    line-height: 20px; 
+    position: center; 
+}
+
+.content button{
+    width: 200px;
+    padding: 15px 0;
+    text-align: center;
+    margin: 20px 10px;
+    border-radius: 25px;
+    font-weight: bold;
+    border: 2px solid #f5f0ebd2;
+    background: transparent;
+    color: white;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+}
+
+span{
+    background: #fcbf9b;
+    height: 100%;
+    width: 0;
+    border-radius: 25px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    z-index: -1;
+    transition: 0.5s;
+}
+
+button:hover span{
+    width: 100%;
+}
+
+button:hover{
+    border: none;
+}
+
+@media only screen and (max-width: 584px){
+    .navbar{
+        margin: 0;
+        padding: 0;
+        display: flex;
+    }
+
+    .content{
+        margin: 0;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+    }
+}
